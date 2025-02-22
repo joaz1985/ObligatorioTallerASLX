@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servidor Web - {{ domain_name }}</title>
+</head>
+<body>
+    <h1>Bienvenido al servidor {{ ansible_hostname }}</h1>
+    <p>Dirección IP: {{ ansible_default_ipv4.address }}</p>
+</body>
+</html>

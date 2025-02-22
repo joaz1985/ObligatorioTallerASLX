@@ -1,0 +1,55 @@
+---
+- name: Configurar servidores web
+  hosts: webserver
+  become: yes
+  vars:
+    domain_name: "www.ejemplo.com.uy"
+    document_root: "/var/www/html"
+    apache_config_path: "/etc/httpd/conf.d/virtualhost.conf"
+  tasks:
+    - name: Instalar Apache
+      package:
+        name: httpd
+        state: present
+
+    - name: Asegurar que Apache esté habilitado y corriendo
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Configurar el VirtualHost
+      copy:
+        dest: "{{ apache_config_path }}"
+        content: |
+          <VirtualHost *:80>
+              ServerName {{ domain_name }}
+              DocumentRoot {{ document_root }}
+              ErrorLog /var/log/httpd/{{ domain_name }}_error.log
+              CustomLog /var/log/httpd/{{ domain_name }}_access.log combined
+          </VirtualHost>
+      notify: Reiniciar Apache
+
+    - name: Asegurar que el firewall permite tráfico HTTP
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+      notify: Recargar firewall
+
+    - name: Desplegar archivo index.html
+      template:
+        src: index.j2
+        dest: "{{ document_root }}/index.html"
+        owner: apache
+        group: apache
+        mode: '0644'
+
+  handlers:
+    - name: Reiniciar Apache
+      service:
+        name: httpd
+        state: restarted
+
+    - name: Recargar firewall
+      command: firewall-cmd --reload
