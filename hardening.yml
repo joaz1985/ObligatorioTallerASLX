@@ -1,0 +1,34 @@
+---
+- name: Aplicar Hardening en servidores Ubuntu
+  hosts: Ubuntu
+  become: true
+
+  tasks:
+    - name: Habilitar UFW y bloquear todo el tráfico entrante excepto SSH
+      ansible.builtin.ufw:
+        state: enabled
+        policy: deny
+        rule: allow
+        port: 22
+        proto: tcp
+
+    - name: Asegurar la clave pública
+      ansible.builtin.authorized_key:
+        user: sysadmin
+        state: present
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      
+    - name: Deshabilitar autenticación por contraseña SSH
+      ansible.builtin.lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^#?PasswordAuthentication'
+        line: 'PasswordAuthentication no'
+        state: present
+        backup: yes
+      register: ssh_config 
+
+    - name: Reiniciar SSH si hubo cambios
+      ansible.builtin.service:
+        name: sshd
+        state: restarted
+      when: ssh_config.changed

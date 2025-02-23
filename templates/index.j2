@@ -1,10 +1,11 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Servidor Web - {{ domain_name }}</title>
-</head>
-<body>
-    <h1>Bienvenido al servidor {{ ansible_hostname }}</h1>
-    <p>Dirección IP: {{ ansible_default_ipv4.address }}</p>
-</body>
+    <head>
+	<title> Pagina ejemplo de plantilla </title>
+    </head>
+    <body>
+	<h1> Esta es una página de ejemplo a partir de una plantilla </h1>
+        <br>
+	<p> El hostname es "{{ ansible_hostname }}" </p>
+        <p> La IP es "{{ ansible_default_ipv4.address }}" </p>
+    </body>
 </html>
