@@ -10,7 +10,7 @@ _Un playbook es un archivo YAML mas complejo, que contiene instrucciones o tarea
 
 **¿Qué es la idempotencia y por qué es importante en Ansible?**
 
-_La idempotencia significa que se puede hacer la misma acción varias veces y el resultado va a ser el mismo. En Ansible eso es importante ya que asegura que al repetir la tarea no se cambiará el estado final, los modulos salen sin realizar ninguna acción_.
+_La idempotencia significa que se puede hacer la misma acción varias veces y el resultado va a ser el mismo. En Ansible eso es importante ya que asegura que al repetir la tarea no se cambiará el estado final, los modulos se ejecutan sin realizar ninguna acción_.
 
 **¿Cómo funcionan los handlers y cuándo deberías usarlos?**
 
