@@ -18,4 +18,5 @@ _Son tareas especiales que se utilizan para realizar acciones solo si se ha real
 
 **¿Cómo verificas errores de sintaxis en un playbook de Ansible?**
 
-_Para verificar errores de sintaxis se puede utilizar junto al comando `ansible_playbook`la opción `--syntax-check`. Este comando analizara el playbook y muestra si hay errores en la tarea sin ejecutarla_.
+_Para verificar errores de sintaxis se puede utilizar junto al comando `ansible_playbook`la opción `--syntax-check`. Este comando analizara el playbook y muestra si hay errores en la tarea sin ejecutarla.
+Otra opción es la herramienta `ansible-lint` que analiza los módulos y controla las tareas de ansible._
