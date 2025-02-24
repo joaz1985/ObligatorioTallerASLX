@@ -1,6 +1,6 @@
 ---
 - name: Deploy apache web server on Centos
-  hosts: centos
+  hosts: webserver
   become: true
 
   tasks:
