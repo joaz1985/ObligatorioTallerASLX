@@ -1,8 +1,8 @@
 #       Descripcion del proyecto
-##
+## Escenario:
 
 
-![](https://logotyp.us/file/ansible.svg)
+![](https://github.com/joaz1985/ObligatorioTallerASLX/blob/main/results/diag.png)
 
 
 
