@@ -5,6 +5,7 @@ _Ansible es un herramienta que se utiliza para la automatización de software, e
 **Explica la diferencia entre un comando ad-hoc y un playbook.**
 
 _Los comando ad-hoc son utilizados para operaciones puntuales, son comandos mas simples que se ejectuan de forma instantanea para tareas rápidas sin un archivo de configuración_
+
 _Un playbook es un archivo YAML mas complejo, que contiene instrucciones o tareas para ejecutar en uno o mas hosts, permite automatizar procesos completos._
 
 **¿Qué es la idempotencia y por qué es importante en Ansible?**
