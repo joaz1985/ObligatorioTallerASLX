@@ -40,4 +40,12 @@ Collection links
 
 Documentation
 - [Ansible Documentation – lineinfile module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
-> 
+
+`ansible.builtin.template` lookup – Retrieve contents of file after templating with Jinja2
+
+Author
+- Michael DeHaan
+- Collection links
+- [Issue Tracker](https://github.com/ansible/ansible/issues)
+- [Repository (Sources)](https://github.com/ansible/ansible)
+- [Communication](https://groups.google.com/forum/#!forum/ansible-project)
