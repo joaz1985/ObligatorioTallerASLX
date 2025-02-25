@@ -13,7 +13,7 @@ Estructura:
 - inventory.ini: Archivo de inventario donde se definen grupos de servidores para Ubuntu y Centos
 - webserver.yml: Playbook para instalar Apache, crear virtualhost (entre otras tareas)
 - hardening.yml: Playbook para seguridad de los servidores ubuntu
-- virtualhost.yml: Playbook especifico para la ocnfiguracion del virtualhost
+- virtualhost.yml: Playbook especifico para la configuracion del virtualhost
 
 > Los registros y capturas de pantalla 
 > de las ejecuciones se encuentran en
@@ -25,7 +25,9 @@ Estructura:
 
 ## **Referencias**
 
-`ansible.builtin.lineinfile module` – Manage lines in text files
+Módulos y Colecciones Utilizados:
+
+`ansible.builtin.lineinfile module` – Manage lines in text files.
 
  Authors
 - Daniel Hokka Zakrissoni (@dhozac)
@@ -41,7 +43,7 @@ Collection links
 Documentation
 - [Ansible Documentation – lineinfile module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/lineinfile_module.html)
 
-`ansible.builtin.template` lookup – Retrieve contents of file after templating with Jinja2
+`ansible.builtin.template` lookup – Retrieve contents of file after templating with Jinja2 
 
 Author
 - Michael DeHaan
