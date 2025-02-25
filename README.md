@@ -49,3 +49,15 @@ Author
 - [Issue Tracker](https://github.com/ansible/ansible/issues)
 - [Repository (Sources)](https://github.com/ansible/ansible)
 - [Communication](https://groups.google.com/forum/#!forum/ansible-project)
+
+
+ `ansible.posix.firewalld module` – Manage arbitrary ports/services with firewalld
+ 
+**Note**
+This module is **not included in ansible-core** and is part of the **ansible.posix** collection.
+- Author
+- Adam Miller (@maxamillion)
+
+Collection links
+- [Issue Tracker](https://github.com/ansible/ansible/issues)
+- [Repository (Sources)](https://github.com/ansible/ansible)
