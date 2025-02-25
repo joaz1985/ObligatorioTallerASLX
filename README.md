@@ -16,9 +16,9 @@ Estructura:
 - hardening.yml: Playbook para seguridad de los servidores ubuntu
 - virtualhost.yml: Playbook especifico para la configuracion del virtualhost
 
-> Los registros y capturas de pantalla 
+> **Los registros y capturas de pantalla 
 > de las ejecuciones se encuentran en
-> el directorio results.
+> el directorio results**.
 
 
 
