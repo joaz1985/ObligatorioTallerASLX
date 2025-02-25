@@ -1,5 +1,6 @@
-#       Descripcion del proyecto
-## Escenario:
+##     Proyecto de automatización con Ansible
+
+- Escenario:
 
 
 ![](https://github.com/joaz1985/ObligatorioTallerASLX/blob/main/images/diag.png)
