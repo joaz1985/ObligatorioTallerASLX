@@ -2,7 +2,7 @@
 ## Escenario:
 
 
-![](https://github.com/joaz1985/ObligatorioTallerASLX/blob/main/results/diag.png)
+![](https://github.com/joaz1985/ObligatorioTallerASLX/blob/main/images/diag.png)
 
 
 
